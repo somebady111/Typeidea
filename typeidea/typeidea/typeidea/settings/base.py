@@ -43,7 +43,7 @@ INSTALLED_APPS = [
     # 'ckeditor_uploader',
     # 'dal',
     # 'dal_select2',
-    # 'xadmin',
+    'xadmin',
     # 'crispy_forms',
     # 'rest_framework',
 

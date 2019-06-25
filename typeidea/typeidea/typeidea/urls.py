@@ -19,6 +19,7 @@ from config.views import LinkListView
 from blog.views import (PostDetailView,IndexView,CategoryView,TagView,SearchView,AuthorView)
 from .custom_site import custom_site
 from comment.views import CommentView, VerifyCaptcha
+from django.conf.urls import url, include
 
 urlpatterns = [
     url(r'^$',IndexView.as_view(),name='index'),
@@ -31,4 +32,6 @@ urlpatterns = [
     url(r'^search/$', SearchView.as_view(), name='search'),
     url(r'^author/(?P<owner_id>\d+)/$', AuthorView.as_view(), name='author'),
     url(r'^verify_captcha/', VerifyCaptcha.as_view(), name='verify_captcha'),
+    url(r'^comment/$', CommentView.as_view(), name='comment'),
+    url(r'^captcha/', include('captcha.urls')),
 ]
