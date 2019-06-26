@@ -111,6 +111,7 @@ class SearchView(IndexView):
         return queryset.filter(Q(title__icontains=keyword) | Q(desc__icontains=keyword))
 
 
+# DetailView提供的接口,get_queryset获取数据
 class AuthorView(IndexView):
     def get_queryset(self):
         queryset = super().get_queryset()

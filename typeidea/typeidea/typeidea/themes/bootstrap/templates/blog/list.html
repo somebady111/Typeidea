@@ -27,6 +27,7 @@
             <p class="card-text">{{ post.desc }}<a href="{% url 'post-detail' post.id %}">完整内容</a></p>
         </div>
     </div>
+
     {% endfor %}
 
     {% if page_obj %}
@@ -38,5 +39,6 @@
         <a href="?page={{ page_obj.next_page_number }}">下一页</a>
     {% endif %}
     {% endif %}
+
 
 {% endblock %}

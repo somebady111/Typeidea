@@ -1,3 +1,4 @@
+# 抽出评论模块组件,自定义标签代码
 from django import template
 
 from comment.forms import CommentForm

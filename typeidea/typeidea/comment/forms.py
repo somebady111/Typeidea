@@ -1,3 +1,4 @@
+# 评论功能
 import mistune
 
 from django import forms
@@ -36,10 +37,12 @@ class CommentForm(forms.ModelForm):
         )
     )
 
+    # clean_content返回有效评论,判断评论长度
     def clean_content(self):
         content = self.cleaned_data.get('content')
         if len(content) < 10:
             raise forms.ValidationError('内容长度怎么能这么短呢！！')
+        # 在form表单保存数据前转换数据
         content = mistune.markdown(content)
         return content
 

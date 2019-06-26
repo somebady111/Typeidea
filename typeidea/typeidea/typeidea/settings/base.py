@@ -39,13 +39,13 @@ INSTALLED_APPS = [
     'captcha',
 
 
-    # 'ckeditor',
-    # 'ckeditor_uploader',
-    # 'dal',
-    # 'dal_select2',
+    'ckeditor',
+    'ckeditor_uploader',
+    'dal',
+    'dal_select2',
     'xadmin',
-    # 'crispy_forms',
-    # 'rest_framework',
+    'crispy_forms',
+    'rest_framework',
 
     'django.contrib.admin',
     'django.contrib.auth',
@@ -56,7 +56,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
-    # 'blog.middleware.user_id.UserIDMiddleware',
+    'blog.middleware.user_id.UserIDMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -92,16 +92,6 @@ TEMPLATES = [
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'typeidea_django',
-        'USER':'root',
-        'PORT':3306,
-        'HOST':'192.168.50.12',
-        'PASSWORD':'jing19961219',
-    }
-}
 
 
 # Password validation
@@ -145,25 +135,25 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'themes', THEME, "static"),
 ]
 
-# XADMIN_TITLE = 'Typeidea管理后台'
-# XADMIN_FOOTER_TITLE = 'power by the5fire.com'
+XADMIN_TITLE = 'Typeidea管理后台'
+XADMIN_FOOTER_TITLE = 'power by the5fire.com'
 
-# CKEDITOR_CONFIGS = {
-#     'default': {
-#         'toolbar': 'full',
-#         'height': 300,
-#         'width': 800,
-#         'tabSpaces': 4,
-#         'extraPlugins': 'codesnippet',
-#     },
-# }
+CKEDITOR_CONFIGS = {
+    'default': {
+        'toolbar': 'full',
+        'height': 300,
+        'width': 800,
+        'tabSpaces': 4,
+        'extraPlugins': 'codesnippet',
+    },
+}
 
-# MEDIA_URL = "/media/"
-# MEDIA_ROOT = os.path.join(BASE_DIR, "media")
-# CKEDITOR_UPLOAD_PATH = "article_images"
+MEDIA_URL = "/media/"
+MEDIA_ROOT = os.path.join(BASE_DIR, "media")
+CKEDITOR_UPLOAD_PATH = "article_images"
 
-# DEFAULT_FILE_STORAGE = 'typeidea.storage.WatermarkStorage'
-# REST_FRAMEWORK = {
-#     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
-#     'PAGE_SIZE': 2,
-# }
+DEFAULT_FILE_STORAGE = 'typeidea.storage.WatermarkStorage'
+REST_FRAMEWORK = {
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
+    'PAGE_SIZE': 2,
+}

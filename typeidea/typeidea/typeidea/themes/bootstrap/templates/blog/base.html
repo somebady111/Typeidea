@@ -29,6 +29,7 @@
             {% endfor %}
             </ul>
             <form class="form-inline" action='/search/' method='GET'>
+<!--                类型表单控件 form提交数据到服务器action指定数据到那个url method指定提交方法-->
                 <input class="form-control" type="search" name="keyword" placeholder="Search" aria-label="Search" value="{{ keyword }}">
               <button class="btn btn-outline-success" type="submit">搜索</button>
             </form>

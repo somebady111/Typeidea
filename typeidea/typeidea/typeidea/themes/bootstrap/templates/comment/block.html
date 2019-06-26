@@ -17,6 +17,7 @@
                 <a href="{{ comment.website }}">{{ comment.nickname }}</a> <span>{{ comment.created_time }}</span>
             </div>
             <div class="comment-content">
+<!--                关闭django模板的自动转码功能-->
                 {% autoescape off %}
                 {{ comment.content }}
                 {% endautoescape %}
