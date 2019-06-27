@@ -49,8 +49,8 @@ urlpatterns = [
     url(r'^verify_captcha/', VerifyCaptcha.as_view(), name='verify_captcha'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
-# if settings.DEBUG:
-#     import debug_toolbar
-#     urlpatterns = [
-#         url(r'^__debug__/', include(debug_toolbar.urls)),
-#     ] + urlpatterns
+if settings.DEBUG:
+    import debug_toolbar
+    urlpatterns = [
+        url(r'^__debug__/', include(debug_toolbar.urls)),
+    ] + urlpatterns

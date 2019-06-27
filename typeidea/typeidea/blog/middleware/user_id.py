@@ -13,6 +13,7 @@ class UserIDMiddleware:
         uid = self.generate_uid(request)
         request.uid = uid
         response = self.get_response(request)
+        # httponly只在服务器端能访问
         response.set_cookie(USER_KEY, uid, max_age=TEN_YEARS, httponly=True)
         return response
 
